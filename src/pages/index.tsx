@@ -23,18 +23,14 @@ export default function Home(): JSX.Element {
       noFooter>
 
       <HeroSection/>
-      <GuidesAndSamplesSection/>
       
-      <CTASection/>
+      
+      
 
-      <ResourcesSection/>
+      
 
-      <div className="z-0">
-        <HelpSection className="-mb-48" />
-      </div>
 
-      <CommunitySection />
-      <HomeFooter/>
+
     </Layout>
   );
 }

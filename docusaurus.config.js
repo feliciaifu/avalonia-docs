@@ -19,7 +19,7 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ru', 'zh-Hans'],
+    locales: ['en'],
   },
   headTags: [
     {
@@ -95,17 +95,12 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
-          editLocalizedFiles: true,
           lastVersion: 'current',
           versions: {
             current: {
-              label: "11.0.x",
+              label: "1.0",
               banner: "none"
             },
-            "0.10.x": {
-              banner: "none"
-            }
           }
         },
         
@@ -135,14 +130,6 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social-card.png',
-      announcementBar: {
-        id: 'support_us',
-        content:
-          '⭐️ Make sure to sponsor Avalonia on <a target="_blank" rel="noopener noreferrer" href="https://github.com/sponsors/AvaloniaUI">GitHub</a> or sign up for <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/Support">Premium Support!</a>',
-        backgroundColor: '#22CE86',
-        textColor: '#ffffff',
-        isCloseable: false,
-      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -166,37 +153,13 @@ const config = {
         }
       },
       navbar: {
-        title: 'Avalonia',
+        title: '考勤排班',
         logo: {
           alt: 'Avalonia Logo',
           src: 'img/purple-border-gradient-icon.png',
           srcDark: "img/white-border-gradient-icon.png"
         },
         items: [
-          {
-            label: 'Documentation',
-            to: '/docs/welcome'
-          },
-          {
-            label: 'API Reference',
-            to: 'https://reference.avaloniaui.net/api/',
-          },
-          {
-              label: 'Resources',
-              type: 'dropdown',
-              className: 'avalonia-dropdown resources-dropdown',
-              items: [
-                {
-                  type: 'html',
-                  value: resourcesHTML,
-                  className: 'avalonia-dropdown',
-                },
-              ],
-          },
-          {
-            label: 'Support',
-            to: 'https://avaloniaui.net/support',
-          },
           {
             type: 'docsVersionDropdown',
             position: 'right',
@@ -205,61 +168,12 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },
-          {
-            type: 'search',
-            position: 'right',
-          },
         ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/get-started/test-drive/introduction',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/avaloniaui',
-              },
-              {
-                label: 'Telegram',
-                href: 'https://t.me/Avalonia',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/avaloniaui',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                href: 'https://avaloniaui.net/Blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/avaloniaui/avalonia',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} AvaloniaUI OÜ (14839404)`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['csharp'],
+        additionalLanguages: ['csharp','cpp'],
       },
       algolia: {
         // The application ID provided by Algolia
